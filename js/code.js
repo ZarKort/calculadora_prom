@@ -25,10 +25,18 @@
             porcFinal += porc;
 
             if(porcFinal == 100){
-              Swal.fire({
-                icon: 'success',
-                title: `Tu Promedio es ${promFinal}`
-              });
+              if(promFinal > 39 ) {
+                Swal.fire({
+                  icon: 'success',
+                  title: `Tu Promedio es ${promFinal}`
+                });
+              }else{
+                Swal.fire({
+                  icon: 'error',
+                  title: `Tu Promedio es ${promFinal}`
+                });
+              }
+             
             }else{
               Swal.fire({
                 icon: 'error',
